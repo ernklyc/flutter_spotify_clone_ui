@@ -16,10 +16,10 @@ class _HomePageState extends State<HomePage> {
   final double _selectedFontSize = 12;
   final double _unSelectedFontSize = 12;
 
-  final double _musicBoardHeight = 60;
+  final double _musicBoardHeight = 55;
 
   final String _imagePath =
-      'https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3';
+      'https://developer.spotify.com/assets/branding-guidelines/icon4@2x.png';
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(
-                      left: 20, right: 10, top: 15, bottom: 10),
+                      left: 12, right: 10, top: 15, bottom: 10),
                   child: ElevatedButton(
                     onPressed: () {},
                     style: TextButton.styleFrom(
@@ -74,98 +74,216 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
 
-            //------------------------------------------------------------
+            //------------------------------------------------------------------
 
             Row(
               children: [
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        left: 20, right: 5, bottom: 5, top: 10),
-                    child: Container(
-                      height: _musicBoardHeight,
+                        left: 12, right: 5, bottom: 5, top: 5),
+                    child: Material(
                       color: const Color(0xff333333),
-                      child: Image.network(
-                        _imagePath,
-                        alignment: Alignment.bottomLeft,
+                      borderRadius: BorderRadius.circular(5),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      child: InkWell(
+                        splashColor: Colors.black26,
+                        onTap: () {},
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Ink.image(
+                              image: NetworkImage(_imagePath),
+                              alignment: Alignment.bottomLeft,
+                              width: 70,
+                              height: _musicBoardHeight,
+                              fit: BoxFit.contain,
+                            ),
+                            const Text(
+                              "den",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
+                //---
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        left: 5, right: 20, bottom: 5, top: 10),
-                    child: Container(
-                      height: _musicBoardHeight,
+                        left: 5, right: 12, bottom: 5, top: 5),
+                    child: Material(
                       color: const Color(0xff333333),
-                      child: Image.network(
-                        _imagePath,
-                        alignment: Alignment.bottomLeft,
+                      borderRadius: BorderRadius.circular(5),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      child: InkWell(
+                        splashColor: Colors.black26,
+                        onTap: () {},
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Ink.image(
+                              image: NetworkImage(_imagePath),
+                              alignment: Alignment.bottomLeft,
+                              width: 70,
+                              height: _musicBoardHeight,
+                              fit: BoxFit.contain,
+                            ),
+                            const Text(
+                              "Den",
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(width: 10),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
               ],
             ),
+
             Row(
               children: [
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        left: 20, right: 5, bottom: 5, top: 5),
-                    child: Container(
-                      height: _musicBoardHeight,
+                        left: 12, right: 5, bottom: 5, top: 5),
+                    child: Material(
                       color: const Color(0xff333333),
-                      child: Image.network(
-                        _imagePath,
-                        alignment: Alignment.bottomLeft,
+                      borderRadius: BorderRadius.circular(5),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      child: InkWell(
+                        splashColor: Colors.black26,
+                        onTap: () {},
+                        child: Row(
+                          //mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Ink.image(
+                              image: NetworkImage(_imagePath),
+                              alignment: Alignment.bottomLeft,
+                              width: 70,
+                              height: _musicBoardHeight,
+                              fit: BoxFit.contain,
+                            ),
+                            const Text(
+                              "Den",
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
+                //---
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        left: 5, right: 20, bottom: 5, top: 5),
-                    child: Container(
-                      height: _musicBoardHeight,
+                        left: 5, right: 12, bottom: 5, top: 5),
+                    child: Material(
                       color: const Color(0xff333333),
-                      child: Image.network(
-                        _imagePath,
-                        alignment: Alignment.bottomLeft,
+                      borderRadius: BorderRadius.circular(5),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      child: InkWell(
+                        splashColor: Colors.black26,
+                        onTap: () {},
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Ink.image(
+                              image: NetworkImage(_imagePath),
+                              alignment: Alignment.bottomLeft,
+                              width: 70,
+                              height: _musicBoardHeight,
+                              fit: BoxFit.contain,
+                            ),
+                            const Text(
+                              "Den",
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(width: 10),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
               ],
             ),
+
             Row(
               children: [
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        left: 20, right: 5, bottom: 5, top: 5),
-                    child: Container(
-                      height: _musicBoardHeight,
+                        left: 12, right: 5, bottom: 5, top: 5),
+                    child: Material(
                       color: const Color(0xff333333),
-                      child: Image.network(
-                        _imagePath,
-                        alignment: Alignment.bottomLeft,
+                      borderRadius: BorderRadius.circular(5),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      child: InkWell(
+                        splashColor: Colors.black26,
+                        onTap: () {},
+                        child: Row(
+                          //mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Ink.image(
+                              image: NetworkImage(_imagePath),
+                              alignment: Alignment.bottomLeft,
+                              width: 70,
+                              height: _musicBoardHeight,
+                              fit: BoxFit.contain,
+                            ),
+                            const Text(
+                              "Den",
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
+                //---
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        left: 5, right: 20, bottom: 5, top: 5),
-                    child: Container(
-                      height: _musicBoardHeight,
+                        left: 5, right: 12, bottom: 5, top: 5),
+                    child: Material(
                       color: const Color(0xff333333),
-                      child: Image.network(
-                        _imagePath,
-                        alignment: Alignment.bottomLeft,
+                      borderRadius: BorderRadius.circular(5),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      child: InkWell(
+                        splashColor: Colors.black26,
+                        onTap: () {},
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Ink.image(
+                              image: NetworkImage(_imagePath),
+                              alignment: Alignment.bottomLeft,
+                              width: 70,
+                              height: _musicBoardHeight,
+                              fit: BoxFit.contain,
+                            ),
+                            const Text(
+                              "Den",
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(width: 10),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -175,6 +293,9 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+
+      //------------------------------------------------------------------------
+
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: HomePageColors.black87.withOpacity(.100),
