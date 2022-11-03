@@ -21,6 +21,15 @@ class _HomePageState extends State<HomePage> {
   final String _imagePath =
       'https://developer.spotify.com/assets/branding-guidelines/icon4@2x.png';
 
+  final String _imagePath2 =
+      'https://i.scdn.co/image/ab67616d0000b27308f7aa608f3d2495859c0d7d';
+
+  final String _imagePath3 =
+      'https://i.scdn.co/image/ab67616d0000b273e2e3e3efc45e4d59395f22d9';
+
+  final String _imagePath4 =
+      'https://i.scdn.co/image/ab67616d0000b2739cdb765ce61bae88380d9940';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +44,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             Row(
@@ -93,14 +103,14 @@ class _HomePageState extends State<HomePage> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Ink.image(
-                              image: NetworkImage(_imagePath),
+                              image: NetworkImage(_imagePath2),
                               alignment: Alignment.bottomLeft,
                               width: 70,
                               height: _musicBoardHeight,
                               fit: BoxFit.contain,
                             ),
                             const Text(
-                              "den",
+                              "Mutlu Ol Yeter",
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
@@ -135,7 +145,7 @@ class _HomePageState extends State<HomePage> {
                               fit: BoxFit.contain,
                             ),
                             const Text(
-                              "Den",
+                              "Eller Günahkar",
                               style: TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.bold),
                             ),
@@ -166,14 +176,14 @@ class _HomePageState extends State<HomePage> {
                           //mainAxisSize: MainAxisSize.min,
                           children: [
                             Ink.image(
-                              image: NetworkImage(_imagePath),
+                              image: NetworkImage(_imagePath3),
                               alignment: Alignment.bottomLeft,
                               width: 70,
                               height: _musicBoardHeight,
                               fit: BoxFit.contain,
                             ),
                             const Text(
-                              "Den",
+                              "Pisişik",
                               style: TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.bold),
                             ),
@@ -206,7 +216,7 @@ class _HomePageState extends State<HomePage> {
                               fit: BoxFit.contain,
                             ),
                             const Text(
-                              "Den",
+                              "Tükeneceğiz",
                               style: TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.bold),
                             ),
@@ -237,14 +247,14 @@ class _HomePageState extends State<HomePage> {
                           //mainAxisSize: MainAxisSize.min,
                           children: [
                             Ink.image(
-                              image: NetworkImage(_imagePath),
+                              image: NetworkImage(_imagePath4),
                               alignment: Alignment.bottomLeft,
                               width: 70,
                               height: _musicBoardHeight,
                               fit: BoxFit.contain,
                             ),
                             const Text(
-                              "Den",
+                              "Uy Aha",
                               style: TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.bold),
                             ),
@@ -277,7 +287,7 @@ class _HomePageState extends State<HomePage> {
                               fit: BoxFit.contain,
                             ),
                             const Text(
-                              "Den",
+                              "Şinanay",
                               style: TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.bold),
                             ),
@@ -289,6 +299,54 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ],
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(top: 30, left: 15, right: 15),
+              child: SizedBox(
+                height: 250,
+                child: ListView(scrollDirection: Axis.horizontal, children: [
+                  Container(color: Colors.red, width: 100),
+                  Container(color: Colors.blue, width: 100),
+                  const SizedBox(width: 20),
+                  Container(color: Colors.red, width: 100),
+                  Container(color: Colors.blue, width: 100),
+                  const SizedBox(width: 20),
+                  Container(color: Colors.red, width: 100),
+                  Container(color: Colors.blue, width: 100),
+                ]),
+              ),
+            ),
+
+            //--------------------------------------------------------------------
+
+            Padding(
+              padding: const EdgeInsets.only(top: 30, left: 15, right: 15),
+              child: SizedBox(
+                height: 250,
+                child: ListView(scrollDirection: Axis.horizontal, children: [
+                  SizedBox(
+                      width: 300,
+                      child: Image.network(
+                        _imagePath,
+                        fit: BoxFit.cover,
+                      )),
+                  const SizedBox(width: 20),
+                  SizedBox(
+                      width: 300,
+                      child: Image.network(
+                        _imagePath,
+                        fit: BoxFit.cover,
+                      )),
+                  const SizedBox(width: 20),
+                  SizedBox(
+                      width: 300,
+                      child: Image.network(
+                        _imagePath,
+                        fit: BoxFit.cover,
+                      )),
+                ]),
+              ),
             ),
           ],
         ),
