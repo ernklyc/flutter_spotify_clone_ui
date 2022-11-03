@@ -7,3 +7,8 @@ class TextItemsNavBar {
 class TextItemsAppBar {
   static const appBarTittle = "Günaydın";
 }
+
+class MusicBorderTexts{
+  static const music = "Müzik";
+  static const podcast = "Podcast'lar ve Programlar";
+}
