@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spotify_clone/product/texts/texts.dart';
 import 'product/constants/constants.dart';
+import 'product/texts/texts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, required String title}) : super(key: key);
@@ -10,25 +10,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  //sekmelerin indexi
-  int _currentIndex = 0;
-
-  final double _selectedFontSize = 12;
-  final double _unSelectedFontSize = 12;
-
   final double _musicBoardHeight = 55;
 
-  final String _imagePath =
-      'https://developer.spotify.com/assets/branding-guidelines/icon4@2x.png';
-
-  final String _imagePath2 =
-      'https://i.scdn.co/image/ab67616d0000b27308f7aa608f3d2495859c0d7d';
-
-  final String _imagePath3 =
-      'https://i.scdn.co/image/ab67616d0000b273e2e3e3efc45e4d59395f22d9';
-
-  final String _imagePath4 =
-      'https://i.scdn.co/image/ab67616d0000b2739cdb765ce61bae88380d9940';
+  final _appBarItems = [
+    IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
+    IconButton(onPressed: () {}, icon: const Icon(Icons.av_timer)),
+    IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -37,11 +25,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: HomePageColors.spotifyColor,
         title: const Text(TextItemsAppBar.appBarTittle),
-        actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.av_timer)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
-        ],
+        actions: _appBarItems,
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
@@ -85,7 +69,7 @@ class _HomePageState extends State<HomePage> {
             ),
 
             //------------------------------------------------------------------
-
+            //Üst 6lı
             Row(
               children: [
                 Expanded(
@@ -103,7 +87,9 @@ class _HomePageState extends State<HomePage> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Ink.image(
-                              image: NetworkImage(_imagePath2),
+                              image: const AssetImage(
+                                "assets/image/ibo.jpeg",
+                              ),
                               alignment: Alignment.bottomLeft,
                               width: 70,
                               height: _musicBoardHeight,
@@ -138,14 +124,16 @@ class _HomePageState extends State<HomePage> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Ink.image(
-                              image: NetworkImage(_imagePath),
+                              image: const AssetImage(
+                                "assets/image/vendetta.jpeg",
+                              ),
                               alignment: Alignment.bottomLeft,
                               width: 70,
                               height: _musicBoardHeight,
                               fit: BoxFit.contain,
                             ),
                             const Text(
-                              "Eller Günahkar",
+                              "Vendetta!",
                               style: TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.bold),
                             ),
@@ -176,7 +164,9 @@ class _HomePageState extends State<HomePage> {
                           //mainAxisSize: MainAxisSize.min,
                           children: [
                             Ink.image(
-                              image: NetworkImage(_imagePath3),
+                              image: const AssetImage(
+                                "assets/image/allame.jpeg",
+                              ),
                               alignment: Alignment.bottomLeft,
                               width: 70,
                               height: _musicBoardHeight,
@@ -209,14 +199,16 @@ class _HomePageState extends State<HomePage> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Ink.image(
-                              image: NetworkImage(_imagePath),
+                              image: const AssetImage(
+                                "assets/image/rppjpeg.jpeg",
+                              ),
                               alignment: Alignment.bottomLeft,
                               width: 70,
                               height: _musicBoardHeight,
                               fit: BoxFit.contain,
                             ),
                             const Text(
-                              "Tükeneceğiz",
+                              "Rec Play Pause",
                               style: TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.bold),
                             ),
@@ -247,7 +239,9 @@ class _HomePageState extends State<HomePage> {
                           //mainAxisSize: MainAxisSize.min,
                           children: [
                             Ink.image(
-                              image: NetworkImage(_imagePath4),
+                              image: const AssetImage(
+                                "assets/image/kazim.jpeg",
+                              ),
                               alignment: Alignment.bottomLeft,
                               width: 70,
                               height: _musicBoardHeight,
@@ -280,14 +274,16 @@ class _HomePageState extends State<HomePage> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Ink.image(
-                              image: NetworkImage(_imagePath),
+                              image: const AssetImage(
+                                "assets/image/evy.jpeg",
+                              ),
                               alignment: Alignment.bottomLeft,
                               width: 70,
                               height: _musicBoardHeight,
                               fit: BoxFit.contain,
                             ),
                             const Text(
-                              "Şinanay",
+                              "Eski ve Yeni",
                               style: TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.bold),
                             ),
@@ -302,88 +298,112 @@ class _HomePageState extends State<HomePage> {
             ),
 
             Padding(
-              padding: const EdgeInsets.only(top: 30, left: 15, right: 15),
-              child: SizedBox(
-                height: 250,
-                child: ListView(scrollDirection: Axis.horizontal, children: [
-                  Container(color: Colors.red, width: 100),
-                  Container(color: Colors.blue, width: 100),
-                  const SizedBox(width: 20),
-                  Container(color: Colors.red, width: 100),
-                  Container(color: Colors.blue, width: 100),
-                  const SizedBox(width: 20),
-                  Container(color: Colors.red, width: 100),
-                  Container(color: Colors.blue, width: 100),
-                ]),
+              padding: const EdgeInsets.only(top: 0, left: 15, right: 12),
+              child: Container(
+                alignment: Alignment.centerLeft,
+                height: 55,
+                color: Colors.transparent,
+                child: const Text(
+                  AlbumTitle.squareTitle,
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0),
+                ),
               ),
             ),
 
-            //--------------------------------------------------------------------
+            Padding(
+              padding:
+                  const EdgeInsets.only(left: 5, right: 5, bottom: 0, top: 2),
+              child: SizedBox(
+                height: 300,
+                child: ListView.builder(
+                  physics: const BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: Texts().imageList.length,
+                  itemBuilder: (context, index) => Column(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(
+                            left: 10, right: 10, bottom: 8, top: 2),
+                        width: 250,
+                        color: Colors.white,
+                        child: InkWell(
+                          splashColor: Colors.black,
+                          onTap: () {},
+                          child: Image(
+                            image: AssetImage(Texts().imageList[index]),
+                            fit: BoxFit.fitWidth,
+                            alignment: Alignment.topCenter,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        Texts().textList[index],
+                        style: const TextStyle(
+                          color: Colors.white70,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
 
             Padding(
-              padding: const EdgeInsets.only(top: 30, left: 15, right: 15),
+              padding: const EdgeInsets.only(top: 0, left: 15, right: 12),
+              child: Container(
+                alignment: Alignment.centerLeft,
+                height: 55,
+                color: Colors.transparent,
+                child: const Text(
+                  AlbumTitle.circleTitle,
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0),
+                ),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
               child: SizedBox(
-                height: 250,
-                child: ListView(scrollDirection: Axis.horizontal, children: [
-                  SizedBox(
-                      width: 300,
-                      child: Image.network(
-                        _imagePath,
-                        fit: BoxFit.cover,
-                      )),
-                  const SizedBox(width: 20),
-                  SizedBox(
-                      width: 300,
-                      child: Image.network(
-                        _imagePath,
-                        fit: BoxFit.cover,
-                      )),
-                  const SizedBox(width: 20),
-                  SizedBox(
-                      width: 300,
-                      child: Image.network(
-                        _imagePath,
-                        fit: BoxFit.cover,
-                      )),
-                ]),
+                height: 270,
+                child: ListView.builder(
+                  physics: const BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: Texts().imageList.length,
+                  itemBuilder: (context, index) => Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          splashColor: Colors.black,
+                          borderRadius: BorderRadius.circular(100),
+                          onTap: () {},
+                          child: CircleAvatar(
+                            radius: 100,
+                            backgroundImage:
+                                AssetImage(Texts().singerImageList[index]),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        Texts().singerNameList[index],
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
+                ),
               ),
             ),
           ],
         ),
-      ),
-
-      //------------------------------------------------------------------------
-
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: HomePageColors.black87.withOpacity(.100),
-        unselectedItemColor: HomePageColors.white.withOpacity(.60),
-        selectedFontSize: _selectedFontSize,
-        unselectedFontSize: _unSelectedFontSize,
-        fixedColor: HomePageColors.white,
-        currentIndex: _currentIndex,
-        // ignore: prefer_const_literals_to_create_immutables
-        items: [
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: TextItemsNavBar.navBarBtn1,
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: TextItemsNavBar.navBarBtn2,
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.library_music),
-            label: TextItemsNavBar.navBarBtn3,
-          ),
-        ],
-        onTap: (index) {
-          setState(
-            () {
-              _currentIndex = index;
-            },
-          );
-        },
       ),
     );
   }
