@@ -42,4 +42,54 @@ class Texts {
     "Kazım Koyuncu, Cimili İbo ve daha fazlası",
     "Allame, Joker, Hidra ve daha fazlası",
   ];
+
+  List searchPageListRight = [
+    "Podcastlar",
+    "Yei Çıkanlar",
+    "Hip Hop",
+    "Popüler",
+    "Canlı Etkinlikler",
+    "Senin için Hazırlandı",
+    "Pop",
+    "Ruh Hali",
+    "Listeler",
+    "Dans ve Elektronik"
+        "Canlı Etkinlikler",
+  ];
+
+  List searchPageListLeft = [
+    "Senin için Hazırlandı",
+    "Pop",
+    "Ruh Hali",
+    "Listeler",
+    "Dans ve Elektronik"
+        "Podcastlar",
+    "Yei Çıkanlar",
+    "Hip Hop",
+    "Popüler",
+    "Canlı Etkinlikler",
+    "Popüler",
+  ];
+
+  List libaryImage = [
+    "assets/image/fk.jpeg",
+    "assets/image/allame.jpeg",
+    "assets/image/ibo.jpeg",
+    "assets/image/kazim.jpeg",
+    "assets/image/spo.jpeg",
+    "assets/image/rppjpeg.jpeg",
+    "assets/image/vendetta.jpeg",
+    "assets/image/evy.jpeg",
+  ];
+
+  List libaryText = [
+    "Farazi ve Kayra",
+    "Allame ve Joker",
+    "Yalan Dünya",
+    "Karadeniz",
+    "Spotify List",
+    "Şehinşah ve Hidra",
+    "İnternational",
+    "Karma",
+  ];
 }

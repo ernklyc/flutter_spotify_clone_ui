@@ -58,9 +58,11 @@ class _PageControlState extends State<PageControl> {
         onTap: (index) {
           setState(
             () {
-              _pageController.animateToPage(index,
-                  duration: const Duration(microseconds: 500),
-                  curve: Curves.linear);
+              _pageController.animateToPage(
+                index,
+                duration: const Duration(microseconds: 500),
+                curve: Curves.linear,
+              );
             },
           );
         },

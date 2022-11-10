@@ -68,6 +68,8 @@ flutter:
     - assets/image/vendetta.jpeg
     - assets/image/evy.jpeg
     - assets/image/fk.jpeg
+    - assets/image/eren.jpeg
+    - assets/image/sptfy.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

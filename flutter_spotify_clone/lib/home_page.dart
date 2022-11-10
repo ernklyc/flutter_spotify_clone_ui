@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spotify_clone/libary_page.dart';
+import 'package:flutter_spotify_clone/music_page.dart';
 import 'product/constants/constants.dart';
 import 'product/texts/texts.dart';
 
@@ -331,7 +333,13 @@ class _HomePageState extends State<HomePage> {
                         color: Colors.white,
                         child: InkWell(
                           splashColor: Colors.black,
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => MusicPage(),
+                                ));
+                          },
                           child: Image(
                             image: AssetImage(Texts().imageList[index]),
                             fit: BoxFit.fitWidth,
@@ -396,7 +404,7 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         Texts().singerNameList[index],
                         style: const TextStyle(fontWeight: FontWeight.bold),
-                      )
+                      ),
                     ],
                   ),
                 ),
