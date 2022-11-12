@@ -1,5 +1,6 @@
+// ignore_for_file: sort_child_properties_last
+
 import 'package:flutter/material.dart';
-import 'product/constants/constants.dart';
 import 'product/texts/texts.dart';
 
 class LibaryPage extends StatefulWidget {
@@ -13,9 +14,9 @@ class _LibaryPageState extends State<LibaryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 20, 20, 20),
+      backgroundColor: const Color.fromARGB(255, 20, 20, 20),
       body: CustomScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
             pinned: true,
@@ -25,10 +26,10 @@ class _LibaryPageState extends State<LibaryPage> {
             expandedHeight: 120,
             collapsedHeight: 70,
             elevation: 10,
-            actions: [
+            actions: const [
               Icon(Icons.search),
               Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: EdgeInsets.all(15.0),
                 child: Icon(Icons.add),
               ),
             ],
@@ -37,14 +38,14 @@ class _LibaryPageState extends State<LibaryPage> {
 
             title: Row(
               children: [
-                Container(
+                SizedBox(
                   width: 35,
                   child: Image.asset(
                     "assets/image/eren.jpeg",
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 15),
+                const Padding(
+                  padding: EdgeInsets.only(left: 15),
                   child: Text(
                     "Kitaplığım",
                     style: TextStyle(fontSize: 20),
@@ -67,24 +68,24 @@ class _LibaryPageState extends State<LibaryPage> {
                           padding: const EdgeInsets.only(
                               left: 12, right: 10, top: 15, bottom: 10),
                           child: OutlinedButton(
-                            child: Text(
+                            style: _stylFrm(),
+                            onPressed: () {},
+                            child: const Text(
                               'Çalma Listeleri',
                               style: TextStyle(fontSize: 10),
                             ),
-                            style: _stylFrm(),
-                            onPressed: () {},
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(
                               left: 0, right: 10, top: 15, bottom: 10),
                           child: OutlinedButton(
-                            child: Text(
+                            style: _stylFrm(),
+                            onPressed: () {},
+                            child: const Text(
                               'İndirilenler',
                               style: TextStyle(fontSize: 10),
                             ),
-                            style: _stylFrm(),
-                            onPressed: () {},
                           ),
                         ),
                       ],
@@ -109,11 +110,11 @@ class _LibaryPageState extends State<LibaryPage> {
                     child: Row(
                       children: [
                         Container(
-                          child: Icon(Icons.sort),
                           alignment: Alignment.topLeft,
+                          child: const Icon(Icons.sort),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 10),
                           child: Text(
                             "Alfabetik",
                             style: TextStyle(fontSize: 14),
@@ -128,8 +129,8 @@ class _LibaryPageState extends State<LibaryPage> {
                     child: Padding(
                       padding: const EdgeInsets.only(right: 10, top: 10),
                       child: Container(
-                        child: Icon(Icons.list),
                         alignment: Alignment.topRight,
+                        child: const Icon(Icons.list),
                       ),
                     ),
                   ),
@@ -146,7 +147,7 @@ class _LibaryPageState extends State<LibaryPage> {
                 return Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(
+                      margin: const EdgeInsets.only(
                           left: 15, right: 7.5, top: 0, bottom: 0),
                       height: 100,
                       decoration:
@@ -154,7 +155,7 @@ class _LibaryPageState extends State<LibaryPage> {
                       child: InkWell(
                         onTap: () {},
                         child: Padding(
-                          padding: EdgeInsets.all(5.0),
+                          padding: const EdgeInsets.all(5.0),
                           child: Image(
                             image: AssetImage(Texts().libaryImage[index]),
                             fit: BoxFit.fill,
@@ -164,12 +165,12 @@ class _LibaryPageState extends State<LibaryPage> {
                     ),
                     Column(
                       children: [
-                        Container(
+                        SizedBox(
                           height: 25,
                           width: 250,
                           child: Text(
                             Texts().libaryText[index],
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -179,14 +180,14 @@ class _LibaryPageState extends State<LibaryPage> {
                           child: Row(
                             children: [
                               Container(
-                                child: Icon(
+                                child: const Icon(
                                   Icons.arrow_circle_down_rounded,
                                   size: 20,
                                   color: Colors.green,
                                 ),
                                 alignment: Alignment.centerLeft,
                               ),
-                              Text(
+                              const Text(
                                 " Çalma Listesi - ErenKLYC",
                                 style: TextStyle(
                                     color: Colors.white70,
@@ -212,8 +213,8 @@ class _LibaryPageState extends State<LibaryPage> {
 
   ButtonStyle _stylFrm() {
     return OutlinedButton.styleFrom(
-      primary: Color.fromARGB(255, 192, 190, 190),
-      side: BorderSide(color: Color.fromARGB(255, 94, 93, 93), width: 1.5),
+      primary: const Color.fromARGB(255, 192, 190, 190),
+      side: const BorderSide(color: Color.fromARGB(255, 94, 93, 93), width: 1.5),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(20),

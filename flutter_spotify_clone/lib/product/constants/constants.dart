@@ -8,7 +8,7 @@ class HomePageColors {
   static const Color topTextButtonColor = Color(0xff333333);
 }
 
-class SerachPageCardColor {
+class AllColor {
   static const Color deepPurple = Colors.deepPurple;
   static const Color deepOrange = Colors.deepOrange;
   static const Color yellow = Colors.yellow;
@@ -18,6 +18,9 @@ class SerachPageCardColor {
   static const Color brown = Colors.brown;
   static const Color limeAccent = Colors.limeAccent;
   static const Color teal = Colors.teal;
+  static const Color white = Colors.white;
+  static const Color black = Colors.black;
+  static const Color white70 = Colors.white70;
 }
 
 class PageContolColors {

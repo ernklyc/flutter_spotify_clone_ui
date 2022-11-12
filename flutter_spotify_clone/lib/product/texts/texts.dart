@@ -20,8 +20,8 @@ class AlbumTitle {
 
 class Texts {
   List imageList = [
-    'assets/image/fk.jpeg',
     'assets/image/allame.jpeg',
+    'assets/image/fk.jpeg',
     'assets/image/klyc.jpeg',
     'assets/image/kazim.jpeg',
   ];
@@ -33,7 +33,7 @@ class Texts {
     'assets/image/evy.jpeg',
   ];
 
-  List singerNameList = ["Vendetta", "Şehinşah", "İbrahim Tatlıses", "Hidra"];
+  List singerNameList = ["Anonim", "Şehinşah", "İbrahim Tatlıses", "Hidra"];
 
   List textList = [
     "Farazi, Kayra ve daha fazlası",
@@ -80,9 +80,25 @@ class Texts {
     "assets/image/rppjpeg.jpeg",
     "assets/image/vendetta.jpeg",
     "assets/image/evy.jpeg",
+    "assets/image/fk.jpeg",
+    "assets/image/allame.jpeg",
+    "assets/image/ibo.jpeg",
+    "assets/image/kazim.jpeg",
+    "assets/image/spo.jpeg",
+    "assets/image/rppjpeg.jpeg",
+    "assets/image/vendetta.jpeg",
+    "assets/image/evy.jpeg",
   ];
 
   List libaryText = [
+    "Farazi ve Kayra",
+    "Allame ve Joker",
+    "Yalan Dünya",
+    "Karadeniz",
+    "Spotify List",
+    "Şehinşah ve Hidra",
+    "İnternational",
+    "Karma",
     "Farazi ve Kayra",
     "Allame ve Joker",
     "Yalan Dünya",

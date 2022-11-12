@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'page_controll.dart';
+import 'product/constants/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData.dark().copyWith(
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.black,
+          backgroundColor: HomePageColors.spotifyColor,
           elevation: 0,
         ),
       ),

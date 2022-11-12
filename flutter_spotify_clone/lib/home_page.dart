@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spotify_clone/libary_page.dart';
 import 'package:flutter_spotify_clone/music_page.dart';
 import 'product/constants/constants.dart';
 import 'product/texts/texts.dart';
@@ -41,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: TextButton.styleFrom(
-                      backgroundColor: const Color(0xff333333),
+                      backgroundColor: HomePageColors.topTextButtonColor,
                       shape: const StadiumBorder(),
                       minimumSize: const Size(50, 33),
                       textStyle: const TextStyle(
@@ -56,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: TextButton.styleFrom(
-                      backgroundColor: const Color(0xff333333),
+                      backgroundColor: HomePageColors.topTextButtonColor,
                       shape: const StadiumBorder(),
                       minimumSize: const Size(60, 33),
                       textStyle: const TextStyle(
@@ -79,11 +78,12 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(
                         left: 12, right: 5, bottom: 5, top: 5),
                     child: Material(
-                      color: const Color(0xff333333),
+                      color: HomePageColors.topTextButtonColor,
                       borderRadius: BorderRadius.circular(5),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: InkWell(
-                        splashColor: Colors.black26,
+                        splashColor:
+                            HomePageColors.topTextButtonColor.withOpacity(.50),
                         onTap: () {},
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -94,7 +94,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               alignment: Alignment.bottomLeft,
                               width: 70,
-                              height: _musicBoardHeight,
+                              height: 50,
                               fit: BoxFit.contain,
                             ),
                             const Text(
@@ -116,11 +116,12 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(
                         left: 5, right: 12, bottom: 5, top: 5),
                     child: Material(
-                      color: const Color(0xff333333),
+                      color: HomePageColors.topTextButtonColor,
                       borderRadius: BorderRadius.circular(5),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: InkWell(
-                        splashColor: Colors.black26,
+                        splashColor:
+                            HomePageColors.topTextButtonColor.withOpacity(.50),
                         onTap: () {},
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -156,12 +157,18 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(
                         left: 12, right: 5, bottom: 5, top: 5),
                     child: Material(
-                      color: const Color(0xff333333),
+                      color: HomePageColors.topTextButtonColor,
                       borderRadius: BorderRadius.circular(5),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: InkWell(
                         splashColor: Colors.black26,
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const MusicPage(),
+                              ));
+                        },
                         child: Row(
                           //mainAxisSize: MainAxisSize.min,
                           children: [
@@ -191,11 +198,12 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(
                         left: 5, right: 12, bottom: 5, top: 5),
                     child: Material(
-                      color: const Color(0xff333333),
+                      color: HomePageColors.topTextButtonColor,
                       borderRadius: BorderRadius.circular(5),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: InkWell(
-                        splashColor: Colors.black26,
+                        splashColor:
+                            HomePageColors.topTextButtonColor.withOpacity(.60),
                         onTap: () {},
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -231,11 +239,12 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(
                         left: 12, right: 5, bottom: 5, top: 5),
                     child: Material(
-                      color: const Color(0xff333333),
+                      color: HomePageColors.topTextButtonColor,
                       borderRadius: BorderRadius.circular(5),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: InkWell(
-                        splashColor: Colors.black26,
+                        splashColor:
+                            HomePageColors.topTextButtonColor.withOpacity(.60),
                         onTap: () {},
                         child: Row(
                           //mainAxisSize: MainAxisSize.min,
@@ -266,11 +275,12 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(
                         left: 5, right: 12, bottom: 5, top: 5),
                     child: Material(
-                      color: const Color(0xff333333),
+                      color: HomePageColors.topTextButtonColor,
                       borderRadius: BorderRadius.circular(5),
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: InkWell(
-                        splashColor: Colors.black26,
+                        splashColor:
+                            HomePageColors.topTextButtonColor.withOpacity(.60),
                         onTap: () {},
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -330,14 +340,14 @@ class _HomePageState extends State<HomePage> {
                         margin: const EdgeInsets.only(
                             left: 10, right: 10, bottom: 8, top: 2),
                         width: 250,
-                        color: Colors.white,
+                        color: AllColor.white,
                         child: InkWell(
-                          splashColor: Colors.black,
+                          splashColor: AllColor.black,
                           onTap: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => MusicPage(),
+                                  builder: (context) => const MusicPage(),
                                 ));
                           },
                           child: Image(
@@ -350,7 +360,7 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         Texts().textList[index],
                         style: const TextStyle(
-                          color: Colors.white70,
+                          color: AllColor.white70,
                           fontSize: 13,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0,
@@ -391,7 +401,7 @@ class _HomePageState extends State<HomePage> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: InkWell(
-                          splashColor: Colors.black,
+                          splashColor: AllColor.black,
                           borderRadius: BorderRadius.circular(100),
                           onTap: () {},
                           child: CircleAvatar(

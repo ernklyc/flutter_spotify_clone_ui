@@ -16,19 +16,19 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       backgroundColor: PageContolColors.bottomNavBarColor,
       body: CustomScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
             bottom: AppBar(
-              title: Container(
+              backgroundColor: PageContolColors.bottomNavBarColor,
+              title: SizedBox(
                 height: 45,
                 child: TextFormField(
                   style: const TextStyle(
-                    color: Color.fromARGB(255, 32, 32, 32),
+                    color: PageContolColors.bottomNavBarColor,
                     fontSize: 14,
                   ),
-                  cursorColor: Colors.black,
-                  initialValue: 'Ne Dinlemek İstiyorsun',
+                  cursorColor: PageContolColors.bottomNavBarColor,
                   decoration: const InputDecoration(
                     isDense: true,
                     contentPadding: EdgeInsets.all(8),
@@ -40,6 +40,8 @@ class _SearchPageState extends State<SearchPage> {
                     ),
                     filled: true,
                     fillColor: Colors.white,
+                    hintText: "Ne Dinlemek İstiyorsun",
+                    hintStyle: TextStyle(color: Colors.black),
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(
                       Icons.search,
@@ -75,7 +77,7 @@ class _SearchPageState extends State<SearchPage> {
                     Expanded(
                       flex: 1,
                       child: Container(
-                        margin: EdgeInsets.only(
+                        margin: const EdgeInsets.only(
                             left: 15, right: 7.5, top: 10, bottom: 7.5),
                         height: 100,
                         decoration: BoxDecoration(
@@ -85,10 +87,10 @@ class _SearchPageState extends State<SearchPage> {
                         child: InkWell(
                           onTap: () {},
                           child: Padding(
-                            padding: EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(12.0),
                             child: Text(
                               Texts().searchPageListLeft[index],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 15, fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -108,10 +110,10 @@ class _SearchPageState extends State<SearchPage> {
                         child: InkWell(
                           onTap: () {},
                           child: Padding(
-                            padding: EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(12.0),
                             child: Text(
                               Texts().searchPageListRight[index],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 15, fontWeight: FontWeight.bold),
                             ),
                           ),
